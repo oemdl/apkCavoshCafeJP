@@ -1,14 +1,251 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.Registrar">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="100dp"
+        android:background="@drawable/sh_bg_header_police_blue">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:layout_marginStart="20dp"
+            android:text="Let's get you registered!"
+            android:textColor="@color/flesh"
+            android:textStyle="bold"
+            android:textSize="24sp" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:layout_marginHorizontal="30dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnIngresar"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sh_bg_btn_carmine_pink"
+                android:text="@string/ingresar"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Button
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-48dp"
+                android:translationZ="5dp"
+                android:background="@drawable/sh_bg_btn_bright_gray"
+                android:text="@string/registrar"
+                android:textAllCaps="false"
+                android:textColor="@color/police_blue"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilNombres"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp"
+            app:hintEnabled="false"
+            app:endIconMode="clear_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/se_bg_edt_police_blue"
+                android:padding="16dp"
+                android:maxLength="30"
+                android:inputType="textPersonName"
+                android:hint="Nombres"
+                android:textColorHint="@color/steel_teal" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            app:hintEnabled="false"
+            app:endIconMode="clear_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/se_bg_edt_police_blue"
+                android:padding="16dp"
+                android:maxLength="30"
+                android:inputType="textEmailAddress"
+                android:hint="@string/correo"
+                android:textColorHint="@color/steel_teal" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPasswordd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            app:hintEnabled="false"
+            app:endIconMode="password_toggle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/se_bg_edt_police_blue"
+                android:padding="16dp"
+                android:maxLength="20"
+                android:inputType="textPassword"
+                android:hint="@string/passwordd"
+                android:textColorHint="@color/steel_teal" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPassworddConfirmar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            app:hintEnabled="false"
+            app:endIconMode="password_toggle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/se_bg_edt_police_blue"
+                android:padding="16dp"
+                android:maxLength="20"
+                android:inputType="textPassword"
+                android:hint="Passwordd confirmar"
+                android:textColorHint="@color/steel_teal" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnRegistrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/sh_bg_btn_gunmetal"
+            android:text="@string/registrar"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/carmine_pink" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Registrate con"
+                android:textColor="@color/police_blue"/>
+            <View
+                android:layout_width="100dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="end"
+                android:background="@color/carmine_pink" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp" >
+
+            <ImageView
+                android:id="@+id/ivFacebook"
+                android:layout_width="108dp"
+                android:layout_height="80dp"
+                android:background="@drawable/sh_bg_btn_flesh"
+                android:clickable="true"
+                android:contentDescription="@string/content_description"
+                android:focusable="true"
+                android:padding="16dp"
+                android:src="@drawable/ic_facebook"
+                app:tint="@color/police_blue" />
+
+            <ImageView
+                android:id="@+id/ivGoogle"
+                android:layout_width="108dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:background="@drawable/sh_bg_btn_flesh"
+                android:clickable="true"
+                android:contentDescription="@string/content_description"
+                android:focusable="true"
+                android:padding="16dp"
+                android:src="@drawable/ic_google_plus"
+                app:tint="@color/carmine_pink" />
+
+            <ImageView
+                android:id="@+id/ivApple"
+                android:layout_width="108dp"
+                android:layout_height="80dp"
+                android:layout_gravity="end"
+                android:background="@drawable/sh_bg_btn_flesh"
+                android:clickable="true"
+                android:contentDescription="@string/content_description"
+                android:focusable="true"
+                android:padding="16dp"
+                android:src="@drawable/ic_apple" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-50dp"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="bottom|center"
+        android:text="¿Si tienes una cuenta ?"
+        android:textColor="@color/police_blue"/>
+
+    <TextView
+        android:id="@+id/tvLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="bottom|center"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="Iniciar sesión"
+        android:textColor="@color/carmine_pink"/>
 
 </FrameLayout>
